@@ -359,6 +359,15 @@ autocmd BufNewFile,BufRead *.py setlocal tabstop=4 softtabstop=4 shiftwidth=4 te
 " toml settings
 au BufRead,BufNewFile MAINTAINERS set ft=toml
 
+" puppet
+au BufNewFile,BufRead *.pp  setlocal kp=pi
+
+" terraform
+au BufNewFile,BufRead *.tfstate setlocal filetype=json
+
+" cloud-init
+au BufNewFile,BufRead *.tpl  setlocal filetype=yaml
+
 " spell check for git commits
 autocmd FileType gitcommit setlocal spell
 
