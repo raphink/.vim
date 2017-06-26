@@ -512,6 +512,12 @@ if has('nvim')
   let g:deoplete#sources#go#sort_class = ['func', 'type', 'var', 'const']
   let g:deoplete#sources#go#align_class = 1
 
+  let g:deoplete#sources#go#pointer = 1
+  let g:deoplete#sources#go#use_cache = 1
+  let g:deoplete#sources#go#json_directory = '~/.cache/deoplete/go/$GOOS_$GOARCH'
+
+  let g:deoplete#enable_ignore_case = 1
+  let g:deoplete#auto_complete_start_length = 2
 
   " Use partial fuzzy matches like YouCompleteMe
   call deoplete#custom#set('_', 'matchers', ['matcher_fuzzy'])
