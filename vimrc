@@ -174,7 +174,7 @@ let g:solarized_termcolors=256
 let g:solarized_termtrans=1
 " let g:hybrid_use_Xresources = 1
 " let g:rehash256 = 1
-colorscheme solarized
+colorscheme solarized8_dark_high
 set guifont=Inconsolata:h15
 set guioptions-=L
 
@@ -585,7 +585,7 @@ let g:syntastic_check_on_wq = 0
 
 " =================== vim-airline ========================
 
-"let g:airline_theme='solarized'
+let g:airline_theme='solarized'
 let g:airline#extensions#syntastic#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tagbar#enabled = 1
