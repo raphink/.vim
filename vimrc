@@ -112,10 +112,8 @@ set display+=lastline
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
 
-" In many terminal emulators the mouse works just fine, thus enable it.
-if has('mouse')
-  set mouse=a
-endif
+" no mouse please
+set mouse=c
 
 " If linux then set ttymouse
 let s:uname = system("echo -n \"$(uname)\"")
