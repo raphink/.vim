@@ -170,6 +170,8 @@ endif
 set background=dark
 let g:solarized_termcolors=256
 let g:solarized_termtrans=1
+let g:solarized_contrast="high"
+let g:solarized_visibility="high"
 " let g:hybrid_use_Xresources = 1
 " let g:rehash256 = 1
 colorscheme solarized
@@ -327,6 +329,7 @@ augroup filetypedetect
   au BufNewFile,BufRead .tmux.conf*,tmux.conf* setf tmux
   au BufNewFile,BufRead .nginx.conf*,nginx.conf* setf nginx
   au BufNewFile,BufRead *.jade setf pug
+  au BufNewFile,BufRead *.aug setf augeas
 augroup END
 
 au FileType nginx setlocal noet ts=4 sw=4 sts=4
