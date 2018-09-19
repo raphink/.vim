@@ -600,4 +600,7 @@ if !g:remoteSession
   let g:airline_powerline_fonts=1
 endif
 
+" =================== deoplete-emoji ========================
+call deoplete#custom#source('emoji', 'filetypes', ['gitcommit', 'markdown', 'md'])
+
 " vim:ts=2:sw=2:et
