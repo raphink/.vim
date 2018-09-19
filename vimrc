@@ -562,6 +562,19 @@ function! Multiple_cursors_after()
   endif
 endfunction
 
+
+" =================== deoplete-emoji ========================
+let emoji_whitelist = ['gitcommit', 'markdown', 'md']
+call deoplete#custom#source('emoji', 'filetypes', emoji_whitelist)
+
+" =================== vim-emoji ========================
+command ReplaceEmojis s/:\([^:]\+\):/\=emoji#for(submatch(1), submatch(0))/g
+command ReplaceAllEmojis %s/:\([^:]\+\):/\=emoji#for(submatch(1), submatch(0))/g
+
+" ========= Replace emojis =========================
+autocmd BufWritePre * if index(emoji_whitelist, &ft) >= 0 | :ReplaceAllEmojis
+
+
 " ========= vim-better-whitespace ==================
 
 " auto strip whitespace except for file with extention blacklisted
@@ -600,7 +613,5 @@ if !g:remoteSession
   let g:airline_powerline_fonts=1
 endif
 
-" =================== deoplete-emoji ========================
-call deoplete#custom#source('emoji', 'filetypes', ['gitcommit', 'markdown', 'md'])
 
 " vim:ts=2:sw=2:et
