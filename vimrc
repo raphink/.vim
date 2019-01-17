@@ -291,7 +291,7 @@ map :Sp :sp
 let g:netrw_dirhistmax=0
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
-cmap w!! w !sudo tee > /dev/null %
+cmap w!! execute 'silent! write !sudo tee % > /dev/null' <bar> edit!
 
 " never do this again --> :set paste <ctrl-v> :set no paste
 let &t_SI .= "\<Esc>[?2004h"
